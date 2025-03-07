@@ -1,0 +1,823 @@
+<html
+  class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths desktop landscape"
+  style=""
+>
+  <!--<!
+  [endif]--><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"
+    />
+    <style>
+      /* base */
+      .mix-text-shadow {
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+      }
+      * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-sizing: border-box;
+        -webkit-user-drag: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      input,
+      textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      html,
+      body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      html {
+        font-size: 10px;
+      }
+      body {
+        font-size: 1.4rem;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      a,
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        line-height: 1.6;
+        letter-spacing: 0.4px;
+      }
+      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        body {
+          font-size: 1.3rem !important;
+        }
+      }
+      @media screen and (min-width: 0px) and (max-width: 1280px) {
+        body {
+          font-size: 1.4rem;
+        }
+        p {
+          line-height: 1.55;
+        }
+        h1 {
+          font-size: 3.6rem;
+          line-height: 1;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+      }
+      @media screen and (min-width: 1281px) and (max-width: 1430px) {
+        body {
+          font-size: 1.5rem;
+        }
+        p {
+          line-height: 1.55;
+        }
+        h1 {
+          font-size: 4.3rem;
+          line-height: 1;
+        }
+        h2 {
+          font-size: 1.9rem;
+        }
+      }
+      @media screen and (min-width: 1620px) and (max-width: 1919px) {
+        body {
+          font-size: 1.5rem;
+        }
+        p {
+          line-height: 1.55;
+        }
+        h1 {
+          font-size: 4.7rem;
+          line-height: 1;
+        }
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+      @media screen and (min-width: 1920px) {
+        body {
+          font-size: 1.5rem;
+        }
+        h1 {
+          font-size: 5.2rem;
+          line-height: 1;
+        }
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+
+      /* rsn_all */
+      .rsn-section {
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-rootNode {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+      }
+      .rsn-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-cocaine-header {
+        background: #000000;
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-loader-wrapper {
+        background: #000000;
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-loader-img {
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-animation: loader-animation 1s infinite linear;
+        animation: loader-animation 1s infinite linear;
+        will-change: transform;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+      }
+      .rsn-loader-text {
+        color: #ffffff;
+        text-align: center;
+        margin: 0;
+      }
+      @-webkit-keyframes loader-animation {
+        0% {
+          -webkit-transform: rotate(0deg) translate(-50%, -50%);
+          transform: rotate(0deg) translate(-50%, -50%);
+        }
+        100% {
+          -webkit-transform: rotate(360deg) translate(-50%, -50%);
+          transform: rotate(360deg) translate(-50%, -50%);
+        }
+      }
+      @keyframes loader-animation {
+        0% {
+          -webkit-transform: rotate(0deg) translate(-50%, -50%);
+          transform: rotate(0deg) translate(-50%, -50%);
+        }
+        100% {
+          -webkit-transform: rotate(360deg) translate(-50%, -50%);
+          transform: rotate(360deg) translate(-50%, -50%);
+        }
+      }
+      .rsn-three-scene {
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-mouse-canvas {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .rsn-reset-btn-wrapper {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+      .rsn-reset-btn {
+        width: 50px;
+        display: block;
+        transition: 0.1s -webkit-transform;
+        transition: 0.1s transform;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        will-change: transform;
+      }
+      .rsn-reset-btn.hover {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .rsn-reset-copy {
+        width: 50px;
+        display: block;
+      }
+
+      /*rsn_critical*/
+      .rsn-hidden {
+        visibility: hidden;
+        display: none;
+      }
+
+      /* main */
+      .loading-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        z-index: 0;
+      }
+      .loading-screen .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-family: sans-serif;
+        font-weight: 800;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .loading-screen .percentage {
+        font-size: 30px;
+        color: #616161;
+        text-align: center;
+      }
+      .loading-screen .progress-meter {
+        position: relative;
+        display: block;
+        width: 260px;
+        height: 4px;
+        background-color: #616161;
+        margin: 15px auto 30px;
+      }
+      .loading-screen .progress-meter .show-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        height: 4px;
+        background-color: #c1c1c1;
+        transition: 0.3s;
+      }
+      .loading-screen .progress-text {
+        position: relative;
+        font-size: 24px;
+      }
+      .loading-screen .progress-text .white-text {
+        position: absolute;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #fff;
+        transition: 0.3s;
+      }
+      .loading-screen .progress-text .red-text {
+        color: #b90000;
+      }
+
+      .rsn-reset-btn-wrapper {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+      .rsn-loader-wrapper {
+        background-color: #000;
+      }
+      svg {
+        fill: #444;
+        height: 40px;
+      }
+      .reset-text {
+        color: #444444;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-44%);
+        font-family: sans-serif;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .ready canvas {
+        cursor: url("./assets/custom-cursor.png"), pointer;
+      }
+    </style>
+    <script src="./20150831105102_1_0_156eb23/js/libs/modernizr-2.8.3.min.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      async=""
+      data-requirecontext="_"
+      data-requiremodule="loader"
+      src="./20150831105102_1_0_156eb23/js/loader.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      async=""
+      data-requirecontext="_"
+      data-requiremodule="main_desktop_extended"
+      src="./20150831105102_1_0_156eb23/js/main_desktop_extended.js"
+    ></script>
+    <style type="text/css">
+      .dg {
+        /** Clear list styles */
+        /* Auto-place container */
+        /* Auto-placed GUI's */
+        /* Line items that don't contain folders. */
+        /** Folder names */
+        /** Hides closed items */
+        /** Controller row */
+        /** Name-half (left) */
+        /** Controller-half (right) */
+        /** Controller placement */
+        /** Shorter number boxes when slider is present. */
+        /** Ensure the entire boolean and function row shows a hand */
+      }
+      .dg ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        clear: both;
+      }
+      .dg.ac {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        z-index: 0;
+      }
+      .dg:not(.ac) .main {
+        /** Exclude mains in ac so that we don't hide close button */
+        overflow: hidden;
+      }
+      .dg.main {
+        -webkit-transition: opacity 0.1s linear;
+        -o-transition: opacity 0.1s linear;
+        -moz-transition: opacity 0.1s linear;
+        transition: opacity 0.1s linear;
+      }
+      .dg.main.taller-than-window {
+        overflow-y: auto;
+      }
+      .dg.main.taller-than-window .close-button {
+        opacity: 1;
+        /* TODO, these are style notes */
+        margin-top: -1px;
+        border-top: 1px solid #2c2c2c;
+      }
+      .dg.main ul.closed .close-button {
+        opacity: 1 !important;
+      }
+      .dg.main:hover .close-button,
+      .dg.main .close-button.drag {
+        opacity: 1;
+      }
+      .dg.main .close-button {
+        /*opacity: 0;*/
+        -webkit-transition: opacity 0.1s linear;
+        -o-transition: opacity 0.1s linear;
+        -moz-transition: opacity 0.1s linear;
+        transition: opacity 0.1s linear;
+        border: 0;
+        position: absolute;
+        line-height: 19px;
+        height: 20px;
+        /* TODO, these are style notes */
+        cursor: pointer;
+        text-align: center;
+        background-color: #000;
+      }
+      .dg.main .close-button:hover {
+        background-color: #111;
+      }
+      .dg.a {
+        float: right;
+        margin-right: 15px;
+        overflow-x: hidden;
+      }
+      .dg.a.has-save > ul {
+        margin-top: 27px;
+      }
+      .dg.a.has-save > ul.closed {
+        margin-top: 0;
+      }
+      .dg.a .save-row {
+        position: fixed;
+        top: 0;
+        z-index: 1002;
+      }
+      .dg li {
+        -webkit-transition: height 0.1s ease-out;
+        -o-transition: height 0.1s ease-out;
+        -moz-transition: height 0.1s ease-out;
+        transition: height 0.1s ease-out;
+      }
+      .dg li:not(.folder) {
+        cursor: auto;
+        height: 27px;
+        line-height: 27px;
+        overflow: hidden;
+        padding: 0 4px 0 5px;
+      }
+      .dg li.folder {
+        padding: 0;
+        border-left: 4px solid rgba(0, 0, 0, 0);
+      }
+      .dg li.title {
+        cursor: pointer;
+        margin-left: -4px;
+      }
+      .dg .closed li:not(.title),
+      .dg .closed ul li,
+      .dg .closed ul li > * {
+        height: 0;
+        overflow: hidden;
+        border: 0;
+      }
+      .dg .cr {
+        clear: both;
+        padding-left: 3px;
+        height: 27px;
+      }
+      .dg .property-name {
+        cursor: default;
+        float: left;
+        clear: left;
+        width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .dg .c {
+        float: left;
+        width: 60%;
+      }
+      .dg .c input[type="text"] {
+        border: 0;
+        margin-top: 4px;
+        padding: 3px;
+        width: 100%;
+        float: right;
+      }
+      .dg .has-slider input[type="text"] {
+        width: 30%;
+        /*display: none;*/
+        margin-left: 0;
+      }
+      .dg .slider {
+        float: left;
+        width: 66%;
+        margin-left: -5px;
+        margin-right: 0;
+        height: 19px;
+        margin-top: 4px;
+      }
+      .dg .slider-fg {
+        height: 100%;
+      }
+      .dg .c input[type="checkbox"] {
+        margin-top: 9px;
+      }
+      .dg .c select {
+        margin-top: 5px;
+      }
+      .dg .cr.function,
+      .dg .cr.function .property-name,
+      .dg .cr.function *,
+      .dg .cr.boolean,
+      .dg .cr.boolean * {
+        cursor: pointer;
+      }
+      .dg .selector {
+        display: none;
+        position: absolute;
+        margin-left: -9px;
+        margin-top: 23px;
+        z-index: 10;
+      }
+      .dg .c:hover .selector,
+      .dg .selector.drag {
+        display: block;
+      }
+      .dg li.save-row {
+        padding: 0;
+      }
+      .dg li.save-row .button {
+        display: inline-block;
+        padding: 0px 6px;
+      }
+      .dg.dialogue {
+        background-color: #222;
+        width: 460px;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+      /* TODO Separate style and structure */
+      #dg-new-constructor {
+        padding: 10px;
+        color: #222;
+        font-family: Monaco, monospace;
+        font-size: 10px;
+        border: 0;
+        resize: none;
+        box-shadow: inset 1px 1px 1px #888;
+        word-wrap: break-word;
+        margin: 12px 0;
+        display: block;
+        width: 440px;
+        overflow-y: scroll;
+        height: 100px;
+        position: relative;
+      }
+
+      #dg-local-explain {
+        display: none;
+        font-size: 11px;
+        line-height: 17px;
+        border-radius: 3px;
+        background-color: #333;
+        padding: 8px;
+        margin-top: 10px;
+      }
+      #dg-local-explain code {
+        font-size: 10px;
+      }
+
+      #dat-gui-save-locally {
+        display: none;
+      }
+
+      /** Main type */
+      .dg {
+        color: #eee;
+        font: 11px "Lucida Grande", sans-serif;
+        text-shadow: 0 -1px 0 #111;
+        /** Auto place */
+        /* Controller row, <li> */
+        /** Controllers */
+      }
+      .dg.main {
+        /** Scrollbar */
+      }
+      .dg.main::-webkit-scrollbar {
+        width: 5px;
+        background: #1a1a1a;
+      }
+      .dg.main::-webkit-scrollbar-corner {
+        height: 0;
+        display: none;
+      }
+      .dg.main::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #676767;
+      }
+      .dg li:not(.folder) {
+        background: #1a1a1a;
+        border-bottom: 1px solid #2c2c2c;
+      }
+      .dg li.save-row {
+        line-height: 25px;
+        background: #dad5cb;
+        border: 0;
+      }
+      .dg li.save-row select {
+        margin-left: 5px;
+        width: 108px;
+      }
+      .dg li.save-row .button {
+        margin-left: 5px;
+        margin-top: 1px;
+        border-radius: 2px;
+        font-size: 9px;
+        line-height: 7px;
+        padding: 4px 4px 5px 4px;
+        background: #c5bdad;
+        color: #fff;
+        text-shadow: 0 1px 0 #b0a58f;
+        box-shadow: 0 -1px 0 #b0a58f;
+        cursor: pointer;
+      }
+      .dg li.save-row .button.gears {
+        background: #c5bdad
+          url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==)
+          2px 1px no-repeat;
+        height: 7px;
+        width: 8px;
+      }
+      .dg li.save-row .button:hover {
+        background-color: #bab19e;
+        box-shadow: 0 -1px 0 #b0a58f;
+      }
+      .dg li.folder {
+        border-bottom: 0;
+      }
+      .dg li.title {
+        padding-left: 16px;
+        background: black
+          url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==)
+          6px 10px no-repeat;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .dg .closed li.title {
+        background-image: url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==);
+      }
+      .dg .cr.boolean {
+        border-left: 3px solid #806787;
+      }
+      .dg .cr.function {
+        border-left: 3px solid #e61d5f;
+      }
+      .dg .cr.number {
+        border-left: 3px solid #2fa1d6;
+      }
+      .dg .cr.number input[type="text"] {
+        color: #2fa1d6;
+      }
+      .dg .cr.string {
+        border-left: 3px solid #1ed36f;
+      }
+      .dg .cr.string input[type="text"] {
+        color: #1ed36f;
+      }
+      .dg .cr.function:hover,
+      .dg .cr.boolean:hover {
+        background: #111;
+      }
+      .dg .c input[type="text"] {
+        background: #303030;
+        outline: none;
+      }
+      .dg .c input[type="text"]:hover {
+        background: #3c3c3c;
+      }
+      .dg .c input[type="text"]:focus {
+        background: #494949;
+        color: #fff;
+      }
+      .dg .c .slider {
+        background: #303030;
+        cursor: ew-resize;
+      }
+      .dg .c .slider-fg {
+        background: #2fa1d6;
+      }
+      .dg .c .slider:hover {
+        background: #3c3c3c;
+      }
+      .dg .c .slider:hover .slider-fg {
+        background: #44abda;
+      }
+    </style>
+  </head>
+  <body class="ready">
+    <div class="loading-screen">
+      <div class="container">
+        <div class="percentage">
+          <span class="js-update-percentage">100</span>%
+        </div>
+        <div class="progress-meter">
+          <div class="show-progress js-update-meter" style="width: 100%"></div>
+        </div>
+        <div class="progress-text">
+          <div class="white-text js-update-text" style="width: 100%">
+            The story behind the Medellín Cartel
+          </div>
+          <div class="red-text">The story behind the Medellín Cartel</div>
+        </div>
+      </div>
+    </div>
+    <div class="rsn-cocaine-header">
+      <div id="rsn-rootNode" class="rsn-rootNode">
+        <div class="js-rsn-content rsn-content">
+          <section class="js-rsn-home rsn-section">
+            <div class="js-rsn-three-scene rsn-three-scene">
+              <canvas
+                width="1739"
+                height="654"
+                style="width: 1739px; height: 654px"
+              ></canvas>
+            </div>
+            <div class="js-rsn-mouse-canvas rsn-mouse-canvas">
+              <canvas
+                width="1600"
+                height="773"
+                style="
+                  pointer-events: none;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                "
+              ></canvas>
+            </div>
+            <div class="js-rsn-reset-btn rsn-reset-btn-wrapper">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 170 180"
+                enable-background="new 0 0 170 180"
+                xml:space="preserve"
+              >
+                <g>
+                  <g class="arrows">
+                    <path
+                      stroke-miterlimit="10"
+                      d="M144.5,64.5c-0.8,3.7-1.5,7.5-2.4,11.2
+									c-1.9,7.4-5.3,14.2-10.2,20.2c-0.7,0.9-1.4,1.8-2.2,2.9c3.2,3.1,6.5,6.3,10.1,9.8c-8.8,0-16.8,0-25,0c0-8.2,0-16.1,0-24.6
+									c3.4,3.3,6.6,6.5,9.9,9.8C136.4,79.1,139.9,63,135,45.2c-3-11-9.4-19.9-18.5-26.8S97.1,8.3,85.5,8.1c0-2.5,0-4.9,0-7.3
+									c1.8,0,3.7,0,5.5,0c0.7,0.1,1.3,0.4,2,0.5c23.8,4,40.2,17,48.3,39.9c1.6,4.5,2.2,9.3,3.2,14C144.5,58.3,144.5,61.4,144.5,64.5z"
+                    ></path>
+                    <path
+                      stroke-miterlimit="10"
+                      d="M26.5,55.2c0.8-3.7,1.5-7.5,2.4-11.2
+									c1.9-7.4,5.3-14.2,10.2-20.2c0.7-0.9,1.4-1.8,2.3-3c-3.2-3.1-6.4-6.3-9.7-9.5c8.4,0,16.4,0,24.6,0c0,8.2,0,16.2,0,24.3
+									c-3.2-3.3-6.3-6.5-9.6-9.9C34.5,40.6,30.4,57,36,74.6c7.5,23.5,24.7,35.5,49.5,37.3c0,2.2,0,4.6,0,6.9c-1.8,0-3.7,0-5.5,0
+									c-0.6-0.1-1.2-0.4-1.7-0.5c-23.6-2.9-43.3-19.9-49.5-42.9c-0.9-3.4-1.5-7-2.2-10.5C26.5,61.7,26.5,58.5,26.5,55.2z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <span class="reset-text">Reset</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script
+      data-main="./20150831105102_1_0_156eb23/js/loader"
+      src="./20150831105102_1_0_156eb23/js/libs/require.js"
+    ></script>
+    <!--
+tags:.
+version: 1.0.510bd1e
+ -->
+    <script>
+      var cocaineCanvas,
+        body = document.getElementsByTagName("body"),
+        canvas,
+        canvasCheck = setInterval(function () {
+          if (document.getElementsByTagName("canvas").length > 0) {
+            clearInterval(canvasCheck);
+            canvas = document.getElementsByTagName("canvas")[0];
+            startCoke();
+          }
+        }, 300),
+        clickCheck,
+        clickSec = 0;
+      function startCoke() {
+        body[0].classList.add("ready");
+        canvas.addEventListener("click", function () {
+          body[0].classList.remove("ready");
+          resetClickTimer();
+          startClickTimer();
+        });
+      }
+      function startClickTimer() {
+        clickCheck = setInterval(function () {
+          clickSec += 1;
+          if (clickSec > 10) {
+            startCoke();
+          }
+        }, 1000);
+      }
+      function resetClickTimer() {
+        clickSec = 0;
+        clearInterval(clickCheck);
+      }
+    </script>
+
+    <script></script>
+  </body>
+</html>
